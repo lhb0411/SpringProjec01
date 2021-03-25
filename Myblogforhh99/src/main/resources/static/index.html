@@ -62,8 +62,6 @@
             let date = $(`#${id}-inputDate`).text().trim();
 
 
-
-
             $(`#cards-box`).hide();
             addHTML2(id, title, username, contents, date);
 
@@ -184,7 +182,7 @@
                                         <span class="input-group-addon" id="basic-addon2"></span>
                                     </div>
                                     <!-- <a id="${id}-title" class="postTitle" onclick="window.location.href='/detail01.html'">-->
-                                    <a id="${id}-title" class="postTitle">
+                                    <a id="${id}-title" class="postTitle" >
                                          ${title}
                                     </a>
 
@@ -211,12 +209,6 @@
                                     </div>
                                 </div>
 
-                                <!-- 버튼 영역-->
-                                <div class="footer">
-                                    <button id="${id}-edit" type="button" class="btn btn-outline-primary edit_btn" onclick="editPost('${id}')" >수정</button>
-                                    <button id="${id}-delete" type="button" class="btn btn-outline-primary delte_btn" onclick="deleteOne('${id}')">삭제</button>
-                                    <button id="${id}-submit" type="button" class="btn btn-outline-primary submit_btn" onclick="submitEdit('${id}')" style="display:none">수정완료</button>
-                                </div>
                             </div>
                             `;
                 // 2. #cards-box2 에 HTML을 붙인다.
@@ -290,7 +282,7 @@
     <h1>항해99 My blog</h1>
     <p>언제든지 게시글을 남겨주세요</p>
     <button id="post-btn" class="btn btn-primary btn-lg" type="button" onclick="postBox()">글쓰기</button>
-    <button class="btn btn-primary btn-lg" type="button"  onclick="window.location.href='/detail01.html'">
+    <button class="btn btn-primary btn-lg" type="button"  onclick="window.location.reload()">
         게시글조회
     </button>
 </div>
