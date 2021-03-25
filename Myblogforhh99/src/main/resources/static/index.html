@@ -17,9 +17,6 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous">
 
-    <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"-->
-    <!--          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"-->
-    <!--          crossorigin="anonymous">-->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
@@ -97,12 +94,10 @@
 
 
         $(document).ready(function () {
-            // HTML 문서를 로드할 때마다 실행합니다.
             getMessages();
         })
 
 
-        // 메모를 불러와서 보여줍니다.
         function getMessages() {
             $('#cards-box').empty();
 
@@ -132,7 +127,7 @@
                                         <input id="${id}-titleInput" type="text" name="title" id="title" class="form-control2" placeholder="제목을 쓰세요" aria-describedby="basic-addon2">
                                         <span class="input-group-addon" id="basic-addon2"></span>
                                     </div>
-                                    <a id="${id}-title" class="postTitle" onclick="detailContents('${id}')">
+                                    <a id="${id}-title" class="postTitle" onclick="detailContents('${id}')" style="cursor:pointer;">
                                          ${title}
                                     </a>
 
@@ -213,7 +208,6 @@
                             `;
                 // 2. #cards-box2 에 HTML을 붙인다.
                 $('#cards-box2').append(tempHtml);
-
             }
 
 
@@ -288,8 +282,6 @@
 </div>
 
 <div class="wrap">
-
-
     <div class="formWrap" id="formWrap" style="display:none">
         <div class="form-title">제목</div>
         <div class="input-group">
@@ -315,54 +307,12 @@
         <div class="d-grid gap-2">
             <button class="btn btn-primary btn-lg width100" type="button" onclick="writePost()">글쓰기</button>
         </div>
-
     </div>
 
     <div id="cards-box" class="area-read">
-        <div class="card">
-            <!-- date/username 영역 -->
-            <div class="metadata" id="${id}-endDetail">
-                <a id="${id}-title" class="postTitle" onclick="showDetail('${id}')">
-                    ${title}
-                </a>
-                <div id="${id}-username" class="postUsername">
-                    ${username}
-                </div>
-
-                <div class="input-group userInput" id="${id}-inputArea">
-                    <input id="${id}-userInput" type="text" name="username" id="username" class="form-control" placeholder="이름을 쓰세요" aria-describedby="basic-addon2">
-                    <span class="input-group-addon" id="basic-addon2"></span>
-                </div>
-
-                <div class="date" id="${id}-inputDate">
-                    ${modifiedAt}
-                </div>
-            </div>
-            <!-- contents 조회/수정 영역-->
-            <div class="contents">
-                <div id="1-contents" class="text">
-                    <pre>내용</pre>
-                </div>
-                <div id="1-editarea" class="edit">
-                    <textarea id="1-textarea" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
-                </div>
-            </div>
-            <!-- 버튼 영역-->
-            <div class="footer">
-                <button id="1-edit" type="button" class="btn btn-outline-primary edit_btn" onclick="editPost('1')">수정
-                </button>
-                <button id="1-delete" type="button" class="btn btn-outline-primary delte_btn" onclick="deleteOne('1')">
-                    삭제
-                </button>
-                <button id="1-submit" type="button" class="btn btn-outline-primary submit_btn"
-                        onclick="submitEdit('1')">수정완료
-                </button>
-            </div>
-        </div>
     </div>
 
     <div id="cards-box2" class="area-read">
-
     </div>
 
 </body>
