@@ -79,7 +79,6 @@
                                         <textarea id="${id}-textarea" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
                                     </div>
                                 </div>
-
                          </div>`;
             // 2. #cards-box 에 HTML을 붙인다.
             $('#cards-box').append(tempHtml);
@@ -95,8 +94,8 @@
     </button>
 </div>
 <div class="wrap">
-    <div id="cards-box" class="area-read" >
-        <div class="card" style="display: none" >
+    <div id="cards-box" class="area-read">
+        <div class="card" >
             <!-- date/username 영역 -->
             <div class="metadata">
                 <a id="${id}-title" class="postTitle" onclick="window.location.href ='/detail01.html'">
@@ -114,12 +113,7 @@
                 <div id="1-contents" class="text">
                     <pre>내용</pre>
                 </div>
-                <div id="1-userEditarea" class="edit">
-                    <textarea id="1-usernames" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
-                </div>
-                <div id="1-editarea" class="edit">
-                    <textarea id="1-textarea" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
-                </div>
+
             </div>
         </div>
     </div>
